@@ -1,0 +1,29 @@
+{
+  "name": "sync_agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "odbc": "^2.4.9",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "bin": "sync.js",
+  "pkg": {
+    "scripts": [
+      "sync.js"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ]
+  }
+}

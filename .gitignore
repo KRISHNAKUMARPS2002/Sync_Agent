@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dotenv environment files
+.env
+.env.* 
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional npm cache directory
+.npm
+
+# Build directories
+dist/
+build/
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+
+# VSCode settings
+.vscode/
+
+# PM2 logs
+pids
+*.pid
+*.seed
+
+# Ignore SQLite files if used
+*.sqlite
+*.sqlite3
+
+# Ignore debug output
+debug.log
+
+# Ignore uploads (if needed)
+uploads/
+public/uploads/
+
+# Next.js (if using)
+.next/
+out/
