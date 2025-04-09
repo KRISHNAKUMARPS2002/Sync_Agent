@@ -1,38 +1,55 @@
-📘 Sync Agent - README
+# SQL Anywhere to PostgreSQL Sync Agent
 
-Name: Sync Agent
-Version: 1.0
-Author: Krishna
-Platform: Windows 64-bit
+## Project Structure
+```
+sync-agent/
+│
+├── sync_agent.exe       # Standalone executable (no Node.js required)
+├── config.env           # Configuration file template
+├── README.txt           # Documentation for users
+└── data/                # Directory for logs
+    └── sync.log         # Log file
+```
 
-🔧 Prerequisites
-Make sure the target system has access to the database configured in the .env file.
+## Configuration File (config.env)
+```
+# SQL Anywhere Connection
+REMOTE_DSN=YourDSN
+REMOTE_DB_USER=YourUsername
+REMOTE_DB_PASS=YourPassword
 
-ODBC driver for SQL Anywhere should be installed and properly configured on the system (for DSN).
+# PostgreSQL Connection
+WEB_DB_HOST=database.example.com
+WEB_DB_PORT=5432
+WEB_DB_USER=YourUsername
+WEB_DB_PASS=YourPassword
+WEB_DB_NAME=YourDBName
 
-📁 Included Files
-sync_agent.exe – Main sync executable (auto runs every few seconds)
+# Sync Settings
+SYNC_INTERVAL=20  # in seconds
+```
 
-start.bat – Double-click to launch the sync agent
+## README.txt
+```
+SQL Anywhere to PostgreSQL Sync Agent
+=====================================
 
-.env – Configuration file (edit with your own credentials)
+This tool synchronizes data from SQL Anywhere to a PostgreSQL database.
 
-sync.log – Log file that records all sync activity
+Setup Instructions:
+------------------
+1. Edit the config.env file with your database connection details
+2. Double-click sync_agent.exe to start the sync agent
+3. The application will run in the background and sync data at the configured interval
+4. Check data/sync.log for sync status and any error messages
 
-🚀 How to Use
-Extract the ZIP file to any location (e.g., Desktop).
+Requirements:
+------------
+- No additional software required (Node.js is bundled in the executable)
+- SQL Anywhere ODBC driver must be installed and configured on your system
+- Network access to both databases
 
-Open the folder.
-
-Edit the .env file with correct database credentials.
-
-Double-click start.bat to run the Sync Agent.
-
-The sync will run in the background and log status in sync.log.
-
-❗ Notes
-Do not close the command window while the agent is running.
-
-Sync runs automatically every few seconds (configurable via .env).
-
-Contact support if you face connection or permission issues.
+Support:
+--------
+For assistance, contact support@example.com
+```
